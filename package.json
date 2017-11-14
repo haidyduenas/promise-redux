@@ -2,7 +2,7 @@
   "name": "promise-redux",
   "version": "0.1.0",
   "private": true,
-  "homapage": "https://haidyduenas.github.io/promise-redux/",
+  "homepage": "https://haidyduenas.github.io/promise-redux/",
   "dependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -14,6 +14,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }

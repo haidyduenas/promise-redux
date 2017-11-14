@@ -1,5 +1,5 @@
 import store from './store';
-
+/*
 export async function search () {
     const url = "data/planets/Kepler-22b.json"
     fetch(url)
@@ -15,3 +15,18 @@ export async function search () {
         })
         
 }
+*/
+export async function search(){
+    const res = await fetch('data/earth-like-results.json');
+    const result = await res.json();
+    const list = await getPlanets(result.results);
+    console.log(list)
+    store.setState({
+        items : list
+    });
+}
+
+function getPlanets(list){
+    return Promise.all(list.map(item=>fetch(item).then(res=>res.json())))
+}
+
