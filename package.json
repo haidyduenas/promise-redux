@@ -2,6 +2,7 @@
   "name": "promise-redux",
   "version": "0.1.0",
   "private": true,
+  "homapage": "https://haidyduenas.github.io/promise-redux/",
   "dependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

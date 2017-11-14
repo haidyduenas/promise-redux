@@ -8,6 +8,7 @@ export async function search () {
             let newItem= [];
             newItem = [...store.getState().items];
             newItem.push(res)
+
             store.setState({
                 items : newItem
             });
